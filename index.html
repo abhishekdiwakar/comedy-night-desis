@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comedy Night with Desis — Hindi Stand-Up Comedy in Stockholm</title>
+  <meta name="description" content="Hindi Stand-Up Comedy Night in Stockholm featuring Atharva, Abhishek, and Ilu. Saturday, 19th Dec 2026 at The South Indian, Rådmansgatan 52." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Rozha One & Yatra One for theatrical Bollywood display typography, paired with Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet" />
+
+  <!-- =====================================================================
+       ORGANIZER CONFIGURATION GUIDE (HOW TO CUSTOMIZE YOUR PAGE):
+       1. Scroll down to the <script> tag at the bottom of this file.
+       2. Update `CONFIG.swishNumberDisplay` & `CONFIG.swishNumberRaw` with your real Swish number.
+       3. Update `CONFIG.ticketPriceSEK` with your exact ticket price (default: 150).
+       4. Update `CONFIG.swishQrImageUrl` with the path/URL to your static Swish QR PNG
+          (e.g., "./swish-qr.png" once uploaded alongside index.html).
+       ===================================================================== -->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            display: ['Rozha One', 'serif'],
+            desi: ['Yatra One', 'cursive'],
+          },
+          colors: {
+            velvetMaroon: '#2b0518',
+            royalMagenta: '#4a042e',
+            saffronGold: '#ff9900',
+            marigold: '#f59e0b',
+            peacockTeal: '#0d9488',
+            warmCream: '#fef3c7',
+            swishGreen: '#38A169',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Rich Royal Magenta & Velvet Maroon Bollywood Backdrop */
+    body {
+      background-color: #2b0518;
+      background-image:
+          radial-gradient(circle at 50% 0%, rgba(255, 183, 3, 0.28) 0%, rgba(74, 4, 46, 0.85) 45%, rgba(43, 5, 24, 1) 90%),
+          radial-gradient(circle at 12% 35%, rgba(13, 148, 136, 0.22) 0%, transparent 48%),
+          radial-gradient(circle at 88% 55%, rgba(255, 153, 0, 0.18) 0%, transparent 50%);
+      color: #fef3c7;
+    }
+
+    /* Metallic Gold Bollywood Title Gradient + 3D Stage Shadow */
+    .bollywood-gold-text {
+      background: linear-gradient(180deg, #fffbeb 0%, #fde047 28%, #f59e0b 65%, #b45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 3px 0 #450a0a) drop-shadow(0 6px 14px rgba(245, 158, 11, 0.45));
+    }
+
+    /* Ornate Mughal / Rajasthani Jharokha Scalloped Archway Frame */
+    .jharokha-arch {
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      border-bottom-left-radius: 1.25rem;
+      border-bottom-right-radius: 1.25rem;
+      border: 2px solid rgba(251, 191, 36, 0.65);
+      box-shadow: 0 0 0 3px rgba(74, 4, 46, 0.9), 0 0 0 4px rgba(245, 158, 11, 0.35), 0 14px 30px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Bollywood Marquee Theatre Bulbs Animation */
+    @keyframes marqueePulse {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 8px #fde047, 0 0 14px #f59e0b; }
+      50% { opacity: 0.45; transform: scale(0.85); box-shadow: 0 0 3px #f59e0b; }
+    }
+    .marquee-bulb {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, #ffffff 10%, #fde047 55%, #d97706 100%);
+      animation: marqueePulse 1.6s infinite ease-in-out;
+    }
+    .marquee-bulb:nth-child(even) {
+      animation-delay: 0.8s;
+    }
+
+    /* Subtle rotating mandala SVG decoration */
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .mandala-spin {
+      animation: spinSlow 85s linear infinite;
+    }
+    .mandala-spin-reverse {
+      animation: spinSlow 110s linear infinite reverse;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-amber-400 selection:text-rose-950 overflow-x-hidden relative">
+
+<!-- TOP VELVET STAGE CURTAINS WITH GOLDEN TASSEL FRINGE (Pure SVG) -->
+<div class="pointer-events-none fixed top-0 inset-x-0 z-20 flex justify-between overflow-hidden" aria-hidden="true">
+  <!-- Left Velvet Curtain -->
+  <svg class="w-36 sm:w-56 h-32 sm:h-44 drop-shadow-2xl" viewBox="0 0 220 180" fill="none">
+    <defs>
+      <linearGradient id="velvetLeft" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#7f1d1d"/>
+        <stop offset="45%" stop-color="#991b1b"/>
+        <stop offset="80%" stop-color="#450a0a"/>
+        <stop offset="100%" stop-color="#2b0518"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 0 H220 C175 45, 110 85, 45 110 C25 140, 15 165, 0 180 Z" fill="url(#velvetLeft)"/>
+    <!-- Curtain Folds -->
+    <path d="M25 0 C22 45, 18 95, 8 155" stroke="#450a0a" stroke-width="4" stroke-opacity="0.65"/>
+    <path d="M68 0 C58 45, 42 80, 22 125" stroke="#450a0a" stroke-width="4" stroke-opacity="0.6"/>
+    <path d="M120 0 C100 35, 75 65, 42 98" stroke="#450a0a" stroke-width="3.5" stroke-opacity="0.55"/>
+    <!-- Golden Zari Fringe Trim -->
+    <path d="M220 0 C175 45, 110 85, 45 110 C25 140, 15 165, 0 180" stroke="#fbbf24" stroke-width="4" stroke-dasharray="6 3"/>
+    <!-- Golden Tieback Tassel -->
+    <circle cx="44" cy="110" r="6" fill="#f59e0b" stroke="#fef08a" stroke-width="1.5"/>
+    <path d="M44 116 L38 134 M44 116 L44 136 M44 116 L50 134" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+
+  <!-- Right Velvet Curtain -->
+  <svg class="w-36 sm:w-56 h-32 sm:h-44 drop-shadow-2xl" viewBox="0 0 220 180" fill="none">
+    <defs>
+      <linearGradient id="velvetRight" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7f1d1d"/>
+        <stop offset="45%" stop-color="#991b1b"/>
+        <stop offset="80%" stop-color="#450a0a"/>
+        <stop offset="100%" stop-color="#2b0518"/>
+      </linearGradient>
+    </defs>
+    <path d="M220 0 H0 C45 45, 110 85, 175 110 C195 140, 205 165, 220 180 Z" fill="url(#velvetRight)"/>
+    <path d="M195 0 C198 45, 202 95, 212 155" stroke="#450a0a" stroke-width="4" stroke-opacity="0.65"/>
+    <path d="M152 0 C162 45, 178 80, 198 125" stroke="#450a0a" stroke-width="4" stroke-opacity="0.6"/>
+    <path d="M100 0 C120 35, 145 65, 178 98" stroke="#450a0a" stroke-width="3.5" stroke-opacity="0.55"/>
+    <path d="M0 0 C45 45, 110 85, 175 110 C195 140, 205 165, 220 180" stroke="#fbbf24" stroke-width="4" stroke-dasharray="6 3"/>
+    <circle cx="176" cy="110" r="6" fill="#f59e0b" stroke="#fef08a" stroke-width="1.5"/>
+    <path d="M176 116 L170 134 M176 116 L176 136 M176 116 L182 134" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- INTRICATE ROTATING RANGOLI / MANDALA BACKGROUND PATTERNS -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden z-0 opacity-20" aria-hidden="true">
+  <svg class="mandala-spin absolute -top-24 -left-24 w-80 h-80 text-amber-400" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1">
+    <circle cx="100" cy="100" r="92" stroke-dasharray="4 4"/>
+    <circle cx="100" cy="100" r="76"/>
+    <circle cx="100" cy="100" r="56" stroke-dasharray="2 3"/>
+    <circle cx="100" cy="100" r="34"/>
+    <path d="M100 8 L100 192 M8 100 L192 100 M35 35 L165 165 M165 35 L35 165"/>
+    <polygon points="100,12 126,74 188,100 126,126 100,188 74,126 12,100 74,74"/>
+    <polygon points="100,22 136,64 178,100 136,136 100,178 64,136 22,100 64,64" transform="rotate(45 100 100)"/>
+    <circle cx="100" cy="100" r="12" fill="currentColor" fill-opacity="0.25"/>
+  </svg>
+  <svg class="mandala-spin-reverse absolute -bottom-28 -right-28 w-96 h-96 text-teal-400" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1">
+    <circle cx="100" cy="100" r="92" stroke-dasharray="5 3"/>
+    <circle cx="100" cy="100" r="72"/>
+    <circle cx="100" cy="100" r="48" stroke-dasharray="2 3"/>
+    <polygon points="100,12 126,74 188,100 126,126 100,188 74,126 12,100 74,74"/>
+    <polygon points="100,22 136,64 178,100 136,136 100,178 64,136 22,100 64,64" transform="rotate(45 100 100)"/>
+  </svg>
+</div>
+
+<!-- Main Mobile-First Container -->
+<div class="relative z-10 max-w-xl mx-auto px-4 pt-7 pb-16 sm:px-6">
+
+  <!-- Top Cultural Pill Badge (India x Sweden Ribbon Accent) -->
+  <div class="flex justify-center mb-4">
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-rose-950/90 backdrop-blur-md border border-amber-400/50 text-xs font-bold tracking-wider text-amber-200 shadow-lg shadow-black/40">
+      <!-- Indian Tricolor Dots -->
+      <span class="inline-flex items-center gap-1" title="India">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FF9933] ring-1 ring-white/30"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-white ring-1 ring-blue-900"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#138808] ring-1 ring-white/30"></span>
+        </span>
+      <span class="font-desi tracking-widest text-amber-300">HINDI COMEDY NIGHT &bull; SWEDEN</span>
+      <!-- Swedish Flag Dots -->
+      <span class="inline-flex items-center gap-1" title="Sweden">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#006AA7] ring-1 ring-yellow-300/40"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FECC02] ring-1 ring-white/30"></span>
+        </span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION IN ORNATE JHAROKHA ARCHWAY -->
+  <header class="text-center mb-5">
+    <!-- Retro Bollywood Golden Microphone Emblem -->
+    <div class="mx-auto mb-2.5 w-14 h-14 rounded-full bg-gradient-to-b from-amber-300 via-amber-500 to-amber-800 p-0.5 shadow-xl shadow-amber-500/30">
+      <div class="w-full h-full rounded-full bg-rose-950 flex items-center justify-center text-amber-300 border border-amber-300/40">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" x2="12" y1="19" y2="22"/>
+          <line x1="8" x2="16" y1="22" y2="22"/>
+        </svg>
+      </div>
+    </div>
+
+    <h1 class="font-display text-4xl sm:text-5xl tracking-wide leading-none uppercase">
+        <span class="block bollywood-gold-text">
+          COMEDY NIGHT
+        </span>
+      <span class="block font-desi text-2xl sm:text-3xl text-amber-100 mt-1 drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]">
+          WITH DESIS
+        </span>
+    </h1>
+
+    <div class="mt-2 flex flex-wrap items-center justify-center gap-2">
+        <span class="inline-block px-3.5 py-0.5 rounded-full bg-teal-900/70 border border-teal-400/40 text-xs sm:text-sm font-bold tracking-wider uppercase text-teal-200">
+          Live in Stockholm, Sweden
+        </span>
+      <span class="inline-block px-3.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/50 text-xs sm:text-sm font-extrabold tracking-wider uppercase text-amber-300">
+          Language: Hindi
+        </span>
+    </div>
+
+    <p class="mt-3 text-sm text-amber-100/90 max-w-md mx-auto leading-relaxed">
+      A blockbuster evening of <strong class="text-amber-300">Hindi stand-up comedy</strong> about Desi life in Sweden, winter survival &amp; cultural chaos starring <strong class="text-amber-300">Atharva</strong>, <strong class="text-amber-300">Abhishek</strong> &amp; <strong class="text-amber-300">Ilu</strong>!
+    </p>
+
+    <!-- Bollywood Marquee Theatre Bulb Highlight Box -->
+    <div class="mt-5 rounded-2xl bg-gradient-to-b from-rose-950/95 via-[#3b0724]/95 to-rose-950/95 border-2 border-amber-400/75 p-1.5 shadow-2xl shadow-black/60">
+      <!-- Top Marquee Bulbs Row -->
+      <div class="flex items-center justify-around px-2 py-1" aria-hidden="true">
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+      </div>
+
+      <div class="rounded-xl bg-black/35 border border-amber-400/25 p-3.5 text-left">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-amber-300 mb-1">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              Housefull Alert &bull; Next Show
+            </div>
+            <p class="text-base sm:text-lg font-extrabold text-white">
+              Saturday, 19th Dec 2026 &bull; <span class="text-amber-300">Starts at 17:00</span>
+            </p>
+            <p class="text-xs sm:text-sm text-amber-100/90 mt-0.5">
+              Venue: <span class="font-bold text-amber-300">The South Indian</span>, Rådmansgatan 52, 113 57 Stockholm
+            </p>
+          </div>
+          <a
+              href="https://www.google.com/maps/search/?api=1&query=The+South+Indian+R%C3%A5dmansgatan+52+113+57+Stockholm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-amber-400/15 hover:bg-amber-400/25 active:scale-[0.98] border border-amber-400/50 text-xs font-bold text-amber-200 transition shrink-0"
+          >
+            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Marquee Bulbs Row -->
+      <div class="flex items-center justify-around px-2 py-1" aria-hidden="true">
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- FESTIVE MARIGOLD GARLAND (GENDA PHOOL) DIVIDER -->
+  <div class="my-4 flex items-center justify-center overflow-hidden" aria-hidden="true">
+    <svg class="w-full max-w-md h-7" viewBox="0 0 400 28" fill="none">
+      <!-- Garland String -->
+      <path d="M0 6 Q 100 22, 200 6 T 400 6" stroke="#15803d" stroke-width="2.5"/>
+      <!-- Marigold Flowers (Alternating Deep Saffron & Bright Yellow-Gold) -->
+      <g>
+        <circle cx="20" cy="9" r="6.5" fill="#f59e0b"/><circle cx="20" cy="9" r="3.5" fill="#fef08a"/>
+        <circle cx="52" cy="13" r="7" fill="#ea580c"/><circle cx="52" cy="13" r="3.5" fill="#fde047"/>
+        <circle cx="84" cy="14" r="6.5" fill="#f59e0b"/><circle cx="84" cy="14" r="3.5" fill="#fef08a"/>
+        <circle cx="116" cy="13" r="7" fill="#ea580c"/><circle cx="116" cy="13" r="3.5" fill="#fde047"/>
+        <circle cx="148" cy="10" r="6.5" fill="#f59e0b"/><circle cx="148" cy="10" r="3.5" fill="#fef08a"/>
+        <circle cx="180" cy="7" r="7" fill="#ea580c"/><circle cx="180" cy="7" r="3.5" fill="#fde047"/>
+        <circle cx="200" cy="6" r="8" fill="#fbbf24" stroke="#b45309" stroke-width="1"/><circle cx="200" cy="6" r="4" fill="#fffbeb"/>
+        <circle cx="220" cy="7" r="7" fill="#ea580c"/><circle cx="220" cy="7" r="3.5" fill="#fde047"/>
+        <circle cx="252" cy="10" r="6.5" fill="#f59e0b"/><circle cx="252" cy="10" r="3.5" fill="#fef08a"/>
+        <circle cx="284" cy="13" r="7" fill="#ea580c"/><circle cx="284" cy="13" r="3.5" fill="#fde047"/>
+        <circle cx="316" cy="14" r="6.5" fill="#f59e0b"/><circle cx="316" cy="14" r="3.5" fill="#fef08a"/>
+        <circle cx="348" cy="13" r="7" fill="#ea580c"/><circle cx="348" cy="13" r="3.5" fill="#fde047"/>
+        <circle cx="380" cy="9" r="6.5" fill="#f59e0b"/><circle cx="380" cy="9" r="3.5" fill="#fef08a"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- STICKY / PROMINENT NAVIGATION TABS -->
+  <nav aria-label="Event Navigation Tabs" class="sticky top-3 z-30 mb-6">
+    <div class="grid grid-cols-2 gap-1.5 p-1.5 rounded-2xl bg-rose-950/95 backdrop-blur-xl border-2 border-amber-400/50 shadow-2xl shadow-black/70">
+      <button
+          id="tab-btn-shows"
+          type="button"
+          onclick="switchTab('shows')"
+          class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-extrabold transition-all duration-200 bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500 text-rose-950 shadow-md cursor-pointer"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+          <line x1="16" x2="16" y1="2" y2="6"/>
+          <line x1="8" x2="8" y1="2" y2="6"/>
+          <line x1="3" x2="21" y1="10" y2="10"/>
+        </svg>
+        <span>Upcoming Shows</span>
+      </button>
+
+      <button
+          id="tab-btn-swish"
+          type="button"
+          onclick="switchTab('swish')"
+          class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-extrabold transition-all duration-200 text-amber-100 hover:text-white hover:bg-white/10 cursor-pointer"
+      >
+        <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <rect width="5" height="5" x="3" y="3" rx="1"/>
+          <rect width="5" height="5" x="16" y="3" rx="1"/>
+          <rect width="5" height="5" x="3" y="16" rx="1"/>
+          <path d="M21 16h-3a2 2 0 0 0-2 2v3"/>
+          <path d="M21 21v.01"/>
+          <path d="M12 7v3a2 2 0 0 1-2 2H7"/>
+          <path d="M3 12h.01"/>
+          <path d="M12 3h.01"/>
+          <path d="M12 16v.01"/>
+          <path d="M16 12h1"/>
+          <path d="M21 12v.01"/>
+          <path d="M12 21v-1"/>
+        </svg>
+        <span>Pay with Swish</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =====================================================================
+       TAB 1: UPCOMING SHOWS & COMEDIAN LINEUP
+       ===================================================================== -->
+  <main id="panel-shows" class="space-y-7 transition-opacity duration-200">
+
+    <!-- Featured Show Card with Indo-Swedish Ribbon & Ornate Gold Border -->
+    <section class="rounded-3xl bg-gradient-to-b from-rose-950/90 to-[#240414]/95 border-2 border-amber-400/55 overflow-hidden shadow-2xl">
+      <!-- India Tricolor + Sweden Blue/Gold Fusion Accent Ribbon -->
+      <div class="h-2 w-full flex">
+        <div class="w-1/5 bg-[#006AA7]"></div>
+        <div class="w-1/5 bg-[#FECC02]"></div>
+        <div class="w-1/5 bg-[#FF9933]"></div>
+        <div class="w-1/5 bg-white"></div>
+        <div class="w-1/5 bg-[#138808]"></div>
+      </div>
+
+      <div class="p-5 sm:p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/50 text-amber-300 text-xs font-extrabold tracking-wide">
+              &#9733; HINDI STAND-UP COMEDY SHOWCASE
+            </span>
+          <span class="text-xs font-bold text-emerald-300 flex items-center gap-1.5 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-500/40">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Seats Open
+            </span>
+        </div>
+
+        <h2 class="font-display text-2xl sm:text-3xl tracking-wide text-amber-200">
+          Comedy Night with Desis — Hindi Special
+        </h2>
+
+        <div class="mt-4 space-y-3 text-sm text-amber-100/90">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-amber-400/15 border border-amber-400/35 flex items-center justify-center text-amber-300 shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-white">Saturday, 19th December 2026</p>
+              <p class="text-xs text-amber-200/80">Starts at 17:00 (Arrive by 16:30 for masala chai &amp; dosas before the laughs begin!)</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-white">The South Indian — Vasastan</p>
+              <p class="text-xs text-amber-200/80">Rådmansgatan 52, 113 57 Stockholm (T-bana: Rådmansgatan)</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-amber-400/15 border border-amber-400/35 flex items-center justify-center text-amber-300 shrink-0">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/>
+                <path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-white"><span class="js-ticket-price">150</span> SEK per person</p>
+              <p class="text-xs text-amber-200/80"><strong class="text-amber-300">Language: Hindi</strong> &bull; Cozy intimate restaurant seating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Primary CTA Button to Switch to Swish Payment Tab -->
+        <button
+            type="button"
+            onclick="switchTab('swish')"
+            class="mt-6 w-full py-3.5 px-5 rounded-2xl bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500 hover:from-amber-200 hover:to-orange-400 active:scale-[0.99] text-rose-950 font-extrabold text-base shadow-lg shadow-amber-500/30 border border-yellow-200 flex items-center justify-center gap-2 transition cursor-pointer"
+        >
+          <span>Book Tickets via Swish</span>
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- STARRING LINEUP IN GOLDEN MUGHAL JHAROKHA ARCHWAYS -->
+    <section>
+      <div class="text-center mb-4">
+        <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-amber-400">Starring Live On Stage</span>
+        <h3 class="font-display text-2xl sm:text-3xl text-amber-100 mt-0.5">Tonight's Desi Lineup</h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Comedian 1: Atharva (1st) -->
+        <article class="jharokha-arch bg-gradient-to-b from-rose-950/95 via-[#380620]/95 to-rose-950 p-4 pt-6 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-orange-700 p-0.5 shadow-lg mb-3">
+            <div class="w-full h-full rounded-full bg-rose-950 flex items-center justify-center font-display text-2xl text-amber-300">
+              AT
+            </div>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-rose-950 font-desi text-xs tracking-wider uppercase shadow">
+              1. Atharva
+            </span>
+          <span class="text-[11px] font-semibold text-amber-300 mt-1.5">Observational &amp; Expat Life</span>
+          <p class="text-xs text-amber-100/85 mt-2 leading-relaxed">
+            Dissecting the everyday absurdities of moving from India to the Nordics—from silent Swedish elevators to surviving 3 PM sunsets.
+          </p>
+        </article>
+
+        <!-- Comedian 2: Abhishek (2nd) -->
+        <article class="jharokha-arch bg-gradient-to-b from-rose-950/95 via-[#380620]/95 to-rose-950 p-4 pt-6 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-orange-700 p-0.5 shadow-lg mb-3">
+            <div class="w-full h-full rounded-full bg-rose-950 flex items-center justify-center font-display text-2xl text-amber-300">
+              AB
+            </div>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-rose-950 font-desi text-xs tracking-wider uppercase shadow">
+              2. Abhishek
+            </span>
+          <span class="text-[11px] font-semibold text-teal-300 mt-1.5">Misdirection &amp; Culture Clash</span>
+          <p class="text-xs text-amber-100/85 mt-2 leading-relaxed">
+            High-energy storytelling packed with unexpected twists on Indian family expectations, Stockholm tech life, and cross-cultural chaos.
+          </p>
+        </article>
+
+        <!-- Comedian 3: Ilu (3rd) -->
+        <article class="jharokha-arch bg-gradient-to-b from-rose-950/95 via-[#380620]/95 to-rose-950 p-4 pt-6 text-center flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-orange-700 p-0.5 shadow-lg mb-3">
+            <div class="w-full h-full rounded-full bg-rose-950 flex items-center justify-center font-display text-2xl text-amber-300">
+              IL
+            </div>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-rose-950 font-desi text-xs tracking-wider uppercase shadow">
+              3. Ilu
+            </span>
+          <span class="text-[11px] font-semibold text-amber-300 mt-1.5">Deadpan &amp; Witty</span>
+          <p class="text-xs text-amber-100/85 mt-2 leading-relaxed">
+            Dry wit and razor-sharp punchlines exploring dating in Sweden and trying to explain Indian spices to Swedish neighbors.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FESTIVE MARIGOLD GARLAND DIVIDER -->
+    <div class="my-2 flex items-center justify-center overflow-hidden" aria-hidden="true">
+      <svg class="w-full max-w-md h-6" viewBox="0 0 400 24" fill="none">
+        <path d="M0 12 H400" stroke="#15803d" stroke-width="2" stroke-dasharray="6 4"/>
+        <circle cx="40" cy="12" r="6" fill="#f59e0b"/><circle cx="40" cy="12" r="2.8" fill="#fef08a"/>
+        <circle cx="100" cy="12" r="6.5" fill="#ea580c"/><circle cx="100" cy="12" r="3" fill="#fde047"/>
+        <circle cx="160" cy="12" r="6" fill="#f59e0b"/><circle cx="160" cy="12" r="2.8" fill="#fef08a"/>
+        <circle cx="200" cy="12" r="7.5" fill="#fbbf24" stroke="#9a3412" stroke-width="1"/><circle cx="200" cy="12" r="3.5" fill="#fffbeb"/>
+        <circle cx="240" cy="12" r="6" fill="#f59e0b"/><circle cx="240" cy="12" r="2.8" fill="#fef08a"/>
+        <circle cx="300" cy="12" r="6.5" fill="#ea580c"/><circle cx="300" cy="12" r="3" fill="#fde047"/>
+        <circle cx="360" cy="12" r="6" fill="#f59e0b"/><circle cx="360" cy="12" r="2.8" fill="#fef08a"/>
+      </svg>
+    </div>
+
+    <!-- More Stockholm Dates & Open Mics -->
+    <section class="rounded-3xl bg-rose-950/75 border border-amber-400/35 p-5 shadow-xl">
+      <div class="flex items-center justify-between mb-3">
+          <span class="px-2.5 py-0.5 rounded-md bg-teal-500/20 border border-teal-400/40 text-[11px] font-bold uppercase tracking-wider text-teal-200">
+            More Stockholm Dates
+          </span>
+        <span class="text-xs text-amber-300 font-semibold">Winter / Spring Tour</span>
+      </div>
+
+      <div class="space-y-3">
+        <div class="rounded-2xl bg-black/30 border border-white/10 p-3.5 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-sm font-bold text-white">English Comedy Open Mic Spots</p>
+            <p class="text-xs text-amber-200/80 mt-0.5">Big Ben Pub &bull; Folkungagatan 97, Södermalm</p>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-amber-400/15 text-amber-300 text-xs font-bold shrink-0">
+              Weekly Spots
+            </span>
+        </div>
+
+        <div class="rounded-2xl bg-black/30 border border-white/10 p-3.5 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-sm font-bold text-white">Desi Comedy Showcase — Winter 2027</p>
+            <p class="text-xs text-amber-200/80 mt-0.5">Central Stockholm &bull; Lineup &amp; Venue TBA</p>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-white/10 text-amber-100 text-xs font-semibold shrink-0">
+              Coming Soon
+            </span>
+        </div>
+      </div>
+
+      <div class="mt-4 text-center">
+        <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400/20 to-pink-500/20 hover:from-amber-400/30 hover:to-pink-500/30 border border-amber-400/40 text-xs font-bold text-amber-200 transition"
+        >
+          <svg class="w-4 h-4 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+          Follow on Instagram for Reel Drops &amp; Updates
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       TAB 2: PAY WITH SWISH (BOLLYWOOD TICKET COUNTER)
+       ===================================================================== -->
+  <section id="panel-swish" class="hidden space-y-5 transition-opacity duration-200">
+
+    <!-- 1. Ticket Selector & Dynamic SEK Calculator -->
+    <div class="rounded-3xl bg-rose-950/90 border-2 border-amber-400/55 p-5 shadow-xl">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <h2 class="font-display text-xl text-amber-200">1. Select Your Tickets</h2>
+          <p class="text-xs text-amber-200/80">Hindi Show &bull; Sat, 19th Dec 2026 &bull; 17:00 &bull; The South Indian</p>
+        </div>
+        <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-extrabold">
+            <span class="js-ticket-price">150</span> SEK / ticket
+          </span>
+      </div>
+
+      <!-- Quick Preset Buttons + Stepper -->
+      <div class="flex items-center justify-between gap-3 bg-black/40 border border-amber-400/25 rounded-2xl p-3 mt-3">
+        <div class="flex items-center gap-2">
+          <button
+              type="button"
+              onclick="updateTickets(-1)"
+              aria-label="Decrease tickets"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white font-extrabold text-xl flex items-center justify-center transition cursor-pointer"
+          >
+            &minus;
+          </button>
+          <div class="w-14 text-center">
+            <span id="ticket-count-display" class="font-display text-3xl text-white">2</span>
+            <span class="block text-[10px] uppercase tracking-wider text-amber-300">Tickets</span>
+          </div>
+          <button
+              type="button"
+              onclick="updateTickets(1)"
+              aria-label="Increase tickets"
+              class="w-11 h-11 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-rose-950 font-extrabold text-xl flex items-center justify-center transition cursor-pointer"
+          >
+            +
+          </button>
+        </div>
+
+        <div class="text-right">
+          <span class="block text-[11px] uppercase tracking-wider text-amber-200/80">Total to Swish</span>
+          <span id="total-sek-display" class="font-display text-3xl text-emerald-400">300 SEK</span>
+        </div>
+      </div>
+
+      <!-- Quick Preset Chips -->
+      <div class="grid grid-cols-4 gap-2 mt-3">
+        <button type="button" onclick="setTickets(1)" class="py-1.5 rounded-lg bg-white/10 hover:bg-amber-400/25 border border-amber-400/25 text-xs font-bold text-amber-100 transition cursor-pointer">1 Ticket</button>
+        <button type="button" onclick="setTickets(2)" class="py-1.5 rounded-lg bg-white/10 hover:bg-amber-400/25 border border-amber-400/25 text-xs font-bold text-amber-100 transition cursor-pointer">2 Tickets</button>
+        <button type="button" onclick="setTickets(3)" class="py-1.5 rounded-lg bg-white/10 hover:bg-amber-400/25 border border-amber-400/25 text-xs font-bold text-amber-100 transition cursor-pointer">3 Tickets</button>
+        <button type="button" onclick="setTickets(4)" class="py-1.5 rounded-lg bg-white/10 hover:bg-amber-400/25 border border-amber-400/25 text-xs font-bold text-amber-100 transition cursor-pointer">4 Tickets</button>
+      </div>
+    </div>
+
+    <!-- 2. Bollywood Marquee Swish Ticket Box -->
+    <div class="rounded-3xl bg-gradient-to-b from-rose-950/95 to-[#240414]/95 border-2 border-amber-400/75 p-1.5 shadow-2xl">
+      <!-- Top Marquee Bulbs -->
+      <div class="flex items-center justify-around px-3 py-1" aria-hidden="true">
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+      </div>
+
+      <div class="p-4 sm:p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-display text-xl text-amber-200">2. Pay via Swish</h2>
+          <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-extrabold">
+              Instant Entry
+            </span>
+        </div>
+
+        <!-- Crisp White QR Code Card Framed in Marigold Gold -->
+        <div class="bg-white rounded-2xl p-5 text-center shadow-xl border-4 border-amber-400 max-w-xs mx-auto">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-extrabold mb-3 border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            SWISH PAYMENT QR
+          </div>
+
+          <!-- QR Image Wrapper -->
+          <div id="qr-image-container" class="relative w-48 h-48 mx-auto rounded-xl border-2 border-amber-500/30 p-2 bg-white flex items-center justify-center overflow-hidden">
+            <img
+                id="swish-qr-img"
+                src=""
+                alt="Swish QR Code for Comedy Night with Desis"
+                class="w-full h-full object-contain hidden"
+            />
+            <!-- High-Contrast QR SVG Placeholder until organizer attaches real QR PNG -->
+            <div id="swish-qr-placeholder" class="w-full h-full flex flex-col items-center justify-center text-slate-900">
+              <svg class="w-36 h-36 text-slate-900" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M10 10h25v25H10V10zm5 5v15h15V15H15zm4 4h7v7h-7v-7z"/>
+                <path d="M65 10h25v25H65V10zm5 5v15h15V15H70zm4 4h7v7h-7v-7z"/>
+                <path d="M10 65h25v25H10V65zm5 5v15h15V70H15zm4 4h7v7h-7v-7z"/>
+                <rect x="42" y="10" width="6" height="6"/><rect x="52" y="10" width="6" height="6"/>
+                <rect x="42" y="20" width="6" height="12"/><rect x="52" y="24" width="6" height="6"/>
+                <rect x="10" y="42" width="12" height="6"/><rect x="28" y="42" width="6" height="12"/>
+                <rect x="65" y="42" width="10" height="6"/><rect x="82" y="42" width="8" height="12"/>
+                <rect x="42" y="65" width="6" height="10"/><rect x="52" y="70" width="12" height="6"/>
+                <rect x="70" y="65" width="8" height="8"/><rect x="82" y="78" width="8" height="12"/>
+                <rect x="65" y="82" width="10" height="8"/>
+              </svg>
+              <span class="text-[10px] font-bold text-slate-500 mt-0.5">Set CONFIG.swishQrImageUrl</span>
+            </div>
+          </div>
+
+          <p class="mt-3 text-xs font-extrabold text-slate-800">
+            Scan with Swish on another device
+          </p>
+          <p class="text-[11px] text-slate-500 mt-0.5">
+            Browsing on your phone? Copy the number below &darr;
+          </p>
+
+          <button
+              type="button"
+              onclick="downloadQrCode(event)"
+              class="mt-3 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-950 text-xs font-bold transition cursor-pointer"
+          >
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" x2="12" y1="15" y2="3"/>
+            </svg>
+            Save QR to Photos
+          </button>
+        </div>
+
+        <!-- Mobile-Friendly One-Click Copy Swish Number Box -->
+        <div class="mt-5 rounded-2xl bg-black/45 border border-amber-400/30 p-4">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-200/80">Swish Number (Mobile-Friendly)</span>
+            <span class="text-xs font-extrabold text-emerald-400" id="copy-amount-reminder">Pay 300 SEK</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-2 bg-rose-950 border border-amber-400/35 rounded-xl p-2.5 pl-3.5">
+              <span id="swish-number-text" class="font-mono text-lg sm:text-xl font-extrabold tracking-wide text-white select-all">
+                07X-XXX XX XX
+              </span>
+            <button
+                id="copy-swish-btn"
+                type="button"
+                onclick="copySwishNumber()"
+                class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 transition shrink-0 cursor-pointer shadow-md"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <span id="copy-btn-label">Copy Swish Number</span>
+            </button>
+          </div>
+          <input type="text" id="hidden-swish-input" value="0700000000" class="sr-only" aria-hidden="true" readonly />
+        </div>
+
+        <!-- Pre-Formatted Swish Message Helper with One-Click Copy -->
+        <div class="mt-3 rounded-2xl bg-black/45 border border-amber-400/30 p-4">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-200/80">Swish Message to Paste</span>
+            <span class="text-[11px] text-amber-300">Auto-updates with tickets</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-2 bg-rose-950 border border-amber-400/35 rounded-xl p-2.5 pl-3.5">
+              <span id="swish-message-preview" class="text-xs sm:text-sm font-semibold text-amber-100 truncate">
+                2x Comedy Dec 19 - [Your Name]
+              </span>
+            <button
+                id="copy-msg-btn"
+                type="button"
+                onclick="copySwishMessage()"
+                class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-rose-950 font-extrabold text-xs flex items-center gap-1.5 transition shrink-0 cursor-pointer"
+            >
+              <span id="copy-msg-label">Copy Message</span>
+            </button>
+          </div>
+          <input type="text" id="hidden-msg-input" value="2x Comedy Dec 19 - " class="sr-only" aria-hidden="true" readonly />
+        </div>
+
+        <!-- Step-by-Step Instructions -->
+        <div class="mt-5 space-y-2.5">
+          <h3 class="text-xs font-extrabold uppercase tracking-wider text-amber-300">How to complete your booking:</h3>
+          <ol class="space-y-2 text-xs sm:text-sm text-amber-100/90">
+            <li class="flex items-start gap-2.5">
+              <span class="w-5 h-5 rounded-full bg-amber-400 text-rose-950 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+              <span>Scan the QR code or tap <strong class="text-white">Copy Swish Number</strong> on your phone.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-5 h-5 rounded-full bg-amber-400 text-rose-950 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <span>Swish the total amount: <strong class="text-emerald-400" id="step-total-sek">300 SEK</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-5 h-5 rounded-full bg-amber-400 text-rose-950 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+              <span>Include <strong class="text-amber-200" id="step-msg-example">"2x Comedy Dec 19 - Your Name"</strong> in the message.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-5 h-5 rounded-full bg-amber-400 text-rose-950 font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+              <span>Show your Swish receipt at the door at <strong class="text-white">The South Indian</strong>!</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Bottom Marquee Bulbs -->
+      <div class="flex items-center justify-around px-3 py-1" aria-hidden="true">
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+        <span class="marquee-bulb"></span><span class="marquee-bulb"></span><span class="marquee-bulb"></span>
+      </div>
+    </div>
+
+    <!-- 3. Quick 'Confirm Your Spot' Guest-List Check-in Card -->
+    <div class="rounded-3xl bg-rose-950/85 border border-amber-400/40 p-5 shadow-xl">
+      <h3 class="font-display text-xl text-amber-200">3. Confirm Your Spot (Guest-List Receipt)</h3>
+      <p class="text-xs text-amber-200/80 mt-0.5 mb-4">
+        Already sent your Swish? Generate an instant on-screen booking pass for smooth door check-in.
+      </p>
+
+      <form id="rsvp-form" onsubmit="handleSeatConfirmation(event)" class="space-y-3">
+        <div>
+          <label for="guest-name" class="block text-xs font-bold text-amber-100 mb-1">Full Name (matching your Swish message)</label>
+          <input
+              id="guest-name"
+              type="text"
+              required
+              oninput="syncMessageWithName()"
+              placeholder="e.g., Rahul Sharma"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-black/45 border border-amber-400/30 text-sm text-white placeholder-amber-200/40 focus:outline-none focus:border-amber-400 transition"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="guest-contact" class="block text-xs font-bold text-amber-100 mb-1">Email or Phone Number</label>
+            <input
+                id="guest-contact"
+                type="text"
+                required
+                placeholder="rahul@example.com or 07X..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-black/45 border border-amber-400/30 text-sm text-white placeholder-amber-200/40 focus:outline-none focus:border-amber-400 transition"
+            />
+          </div>
+
+          <div>
+            <label for="guest-tickets" class="block text-xs font-bold text-amber-100 mb-1">Tickets Paid For</label>
+            <select
+                id="guest-tickets"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-rose-950 border border-amber-400/30 text-sm text-white focus:outline-none focus:border-amber-400 transition"
+            >
+              <option value="1">1 Ticket (150 SEK)</option>
+              <option value="2" selected>2 Tickets (300 SEK)</option>
+              <option value="3">3 Tickets (450 SEK)</option>
+              <option value="4">4 Tickets (600 SEK)</option>
+              <option value="5">5 Tickets (750 SEK)</option>
+            </select>
+          </div>
+        </div>
+
+        <button
+            type="submit"
+            class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 active:scale-[0.99] border border-teal-300/40 text-sm font-extrabold text-white shadow-lg transition cursor-pointer"
+        >
+          Confirm My Spot
+        </button>
+      </form>
+
+      <!-- Instant On-Screen Booking Pass Summary -->
+      <div id="booking-confirmation-box" class="hidden mt-4 rounded-2xl bg-emerald-950/90 border-2 border-emerald-400/60 p-4 text-left shadow-lg">
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-400 text-rose-950 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-display text-lg text-emerald-300">VIP Guest Pass Ready!</h4>
+            <p id="confirmation-details" class="text-xs text-white mt-1 leading-relaxed"></p>
+            <p class="text-[11px] text-amber-200 mt-2">
+              Screenshot this pass + your Swish receipt for check-in at <strong>The South Indian</strong> (Sat, 19th Dec at 17:00).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-10 pt-6 border-t border-amber-400/20 text-center text-xs text-amber-200/75 space-y-1.5">
+    <p class="font-desi tracking-wider text-sm text-amber-300">COMEDY NIGHT WITH DESIS &bull; STOCKHOLM</p>
+    <p>The South Indian &bull; Rådmansgatan 52, 113 57 Stockholm</p>
+  </footer>
+
+</div>
+
+<!-- Floating Toast Notification for Mobile Copy Feedback -->
+<div
+    id="toast-banner"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-amber-400 text-rose-950 font-extrabold text-xs sm:text-sm shadow-2xl border-2 border-white opacity-0 pointer-events-none transition-all duration-300 translate-y-3 flex items-center gap-2"
+>
+  <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
+    <polyline points="20 6 9 17 4 12"/>
+  </svg>
+  <span id="toast-message">Copied to clipboard!</span>
+</div>
+
+<!-- =====================================================================
+     JAVASCRIPT: ORGANIZER SETTINGS, TAB SWITCHING, CALCULATOR & COPY LOGIC
+     ===================================================================== -->
+<script>
+  /**
+   * ORGANIZER CONFIGURATION
+   * Replace these values with your actual Swish details before publishing!
+   */
+  const CONFIG = {
+    // Displayed formatted Swish number (e.g., "070-123 45 67" or "123 456 78 90")
+    swishNumberDisplay: "0737308509",
+    // Clean digits copied to clipboard when user taps "Copy Swish Number"
+    swishNumberRaw: "0700000000",
+    // Ticket price in Swedish Kronor (SEK)
+    ticketPriceSEK: 99,
+    // Path or URL to your static Swish QR PNG (leave empty "" to show the built-in placeholder)
+    swishQrImageUrl: "swish-qr.png"
+  };
+
+  let currentTickets = 2;
+  let toastTimer = null;
+
+  /**
+   * Initialize page values from CONFIG on load
+   */
+  window.addEventListener("DOMContentLoaded", () => {
+    try {
+      const swishDisplayEl = document.getElementById("swish-number-text");
+      const hiddenInputEl = document.getElementById("hidden-swish-input");
+      if (swishDisplayEl) swishDisplayEl.textContent = CONFIG.swishNumberDisplay;
+      if (hiddenInputEl) hiddenInputEl.value = CONFIG.swishNumberRaw;
+
+      document.querySelectorAll(".js-ticket-price").forEach((el) => {
+        el.textContent = CONFIG.ticketPriceSEK;
+      });
+
+      const ticketSelect = document.getElementById("guest-tickets");
+      if (ticketSelect) {
+        Array.from(ticketSelect.options).forEach((opt) => {
+          const count = parseInt(opt.value, 10);
+          opt.textContent = `${count} ${count === 1 ? "Ticket" : "Tickets"} (${count * CONFIG.ticketPriceSEK} SEK)`;
+        });
+      }
+
+      if (CONFIG.swishQrImageUrl && CONFIG.swishQrImageUrl.trim() !== "") {
+        const qrImg = document.getElementById("swish-qr-img");
+        const qrPlaceholder = document.getElementById("swish-qr-placeholder");
+        qrImg.src = CONFIG.swishQrImageUrl;
+        qrImg.onload = () => {
+          qrImg.classList.remove("hidden");
+          qrPlaceholder.classList.add("hidden");
+        };
+        qrImg.onerror = () => {
+          qrImg.classList.add("hidden");
+          qrPlaceholder.classList.remove("hidden");
+        };
+      }
+
+      renderTicketTotals();
+    } catch (err) {
+      console.error("Initialization error:", err);
+    }
+  });
+
+  /**
+   * Show sleek Bollywood gold toast notification
+   */
+  function showToast(message) {
+    const toast = document.getElementById("toast-banner");
+    const toastMsg = document.getElementById("toast-message");
+    if (!toast || !toastMsg) return;
+
+    toastMsg.textContent = message;
+    toast.classList.remove("opacity-0", "translate-y-3", "pointer-events-none");
+    toast.classList.add("opacity-100", "translate-y-0");
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.add("opacity-0", "translate-y-3", "pointer-events-none");
+      toast.classList.remove("opacity-100", "translate-y-0");
+    }, 2400);
+  }
+
+  /**
+   * Switch smoothly between 'shows' and 'swish' tabs
+   */
+  function switchTab(tabName) {
+    const showsPanel = document.getElementById("panel-shows");
+    const swishPanel = document.getElementById("panel-swish");
+    const showsBtn = document.getElementById("tab-btn-shows");
+    const swishBtn = document.getElementById("tab-btn-swish");
+
+    const activeClasses = ["bg-gradient-to-r", "from-amber-300", "via-amber-400", "to-orange-500", "text-rose-950", "shadow-md"];
+    const inactiveClasses = ["text-amber-100", "hover:text-white", "hover:bg-white/10"];
+
+    if (tabName === "swish") {
+      showsPanel.classList.add("hidden");
+      swishPanel.classList.remove("hidden");
+
+      swishBtn.classList.add(...activeClasses);
+      swishBtn.classList.remove(...inactiveClasses);
+
+      showsBtn.classList.remove(...activeClasses);
+      showsBtn.classList.add(...inactiveClasses);
+    } else {
+      swishPanel.classList.add("hidden");
+      showsPanel.classList.remove("hidden");
+
+      showsBtn.classList.add(...activeClasses);
+      showsBtn.classList.remove(...inactiveClasses);
+
+      swishBtn.classList.remove(...activeClasses);
+      swishBtn.classList.add(...inactiveClasses);
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /**
+   * Adjust ticket count via +/- buttons
+   */
+  function updateTickets(delta) {
+    const nextCount = currentTickets + delta;
+    if (nextCount >= 1 && nextCount <= 20) {
+      currentTickets = nextCount;
+      renderTicketTotals();
+    }
+  }
+
+  /**
+   * Set exact ticket count via preset buttons
+   */
+  function setTickets(count) {
+    currentTickets = count;
+    renderTicketTotals();
+  }
+
+  /**
+   * Sync Swish message helper with typed name if available
+   */
+  function syncMessageWithName() {
+    renderTicketTotals();
+  }
+
+  /**
+   * Update UI totals & pre-formatted Swish message across the Swish payment tab
+   */
+  function renderTicketTotals() {
+    const totalSEK = currentTickets * CONFIG.ticketPriceSEK;
+    document.getElementById("ticket-count-display").textContent = currentTickets;
+    document.getElementById("total-sek-display").textContent = `${totalSEK} SEK`;
+    document.getElementById("copy-amount-reminder").textContent = `Pay ${totalSEK} SEK`;
+    document.getElementById("step-total-sek").textContent = `${totalSEK} SEK`;
+
+    const typedName = (document.getElementById("guest-name")?.value || "").trim();
+    const displaySuffix = typedName ? typedName : "[Your Name]";
+    const formattedMessage = `${currentTickets}x Comedy Dec 19 - ${displaySuffix}`;
+
+    document.getElementById("swish-message-preview").textContent = formattedMessage;
+    document.getElementById("hidden-msg-input").value = formattedMessage;
+    document.getElementById("step-msg-example").textContent = `"${formattedMessage}"`;
+
+    const guestTicketsSelect = document.getElementById("guest-tickets");
+    if (guestTicketsSelect && currentTickets <= 5) {
+      guestTicketsSelect.value = String(currentTickets);
+    }
+  }
+
+  /**
+   * Copy text using reliable hidden input + document.execCommand('copy')
+   */
+  function copyFromInput(inputElement) {
+    inputElement.classList.remove("sr-only");
+    inputElement.select();
+    inputElement.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    inputElement.classList.add("sr-only");
+  }
+
+  /**
+   * Copy Swish number to clipboard with instant visual feedback & toast
+   */
+  function copySwishNumber() {
+    const hiddenInput = document.getElementById("hidden-swish-input");
+    const copyBtn = document.getElementById("copy-swish-btn");
+    const copyLabel = document.getElementById("copy-btn-label");
+
+    try {
+      copyFromInput(hiddenInput);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+
+    const originalText = copyLabel.textContent;
+    copyLabel.textContent = "Copied!";
+    copyBtn.classList.remove("bg-emerald-500", "hover:bg-emerald-400");
+    copyBtn.classList.add("bg-amber-400");
+    showToast(`Swish number ${CONFIG.swishNumberDisplay} copied!`);
+
+    setTimeout(() => {
+      copyLabel.textContent = originalText;
+      copyBtn.classList.remove("bg-amber-400");
+      copyBtn.classList.add("bg-emerald-500", "hover:bg-emerald-400");
+    }, 2200);
+  }
+
+  /**
+   * Copy pre-formatted Swish message to clipboard
+   */
+  function copySwishMessage() {
+    const hiddenMsgInput = document.getElementById("hidden-msg-input");
+    const copyMsgLabel = document.getElementById("copy-msg-label");
+
+    try {
+      copyFromInput(hiddenMsgInput);
+    } catch (err) {
+      console.error("Message copy failed:", err);
+    }
+
+    const orig = copyMsgLabel.textContent;
+    copyMsgLabel.textContent = "Copied!";
+    showToast("Swish message copied — paste it in Swish!");
+
+    setTimeout(() => {
+      copyMsgLabel.textContent = orig;
+    }, 2200);
+  }
+
+  /**
+   * Allow mobile users to download/save the QR image
+   */
+  function downloadQrCode(evt) {
+    const qrImg = document.getElementById("swish-qr-img");
+    if (qrImg && !qrImg.classList.contains("hidden") && qrImg.src) {
+      const link = document.createElement("a");
+      link.href = qrImg.src;
+      link.download = "Comedy-Night-Desis-Swish-QR.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("Swish QR saved to your device!");
+    } else {
+      showToast("Tip: Tap 'Copy Swish Number' below to pay on mobile!");
+    }
+  }
+
+  /**
+   * Handle 'Confirm Your Spot' mini-form submission
+   */
+  function handleSeatConfirmation(event) {
+    event.preventDefault();
+    const name = document.getElementById("guest-name").value.trim();
+    const contact = document.getElementById("guest-contact").value.trim();
+    const tickets = parseInt(document.getElementById("guest-tickets").value, 10);
+    const total = tickets * CONFIG.ticketPriceSEK;
+
+    const box = document.getElementById("booking-confirmation-box");
+    const details = document.getElementById("confirmation-details");
+
+    details.innerHTML = `
+        <strong>Show:</strong> Comedy Night with Desis (Hindi Stand-Up)<br/>
+        <strong>Guest:</strong> ${escapeHtml(name)}<br/>
+        <strong>Admits:</strong> ${tickets} ${tickets === 1 ? "Person" : "People"} (${total} SEK via Swish)<br/>
+        <strong>Contact:</strong> ${escapeHtml(contact)}
+      `;
+
+    box.classList.remove("hidden");
+    box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    showToast("Your Bollywood VIP Guest Pass is ready!");
+  }
+
+  /**
+   * Escape HTML to prevent XSS
+   */
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+</script>
+</body>
+</html>
