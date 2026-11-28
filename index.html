@@ -21,6 +21,7 @@
        3. Update `CONFIG.ticketPriceSEK` with your exact ticket price (default: 150).
        4. Update `CONFIG.swishQrImageUrl` with the path/URL to your static Swish QR PNG
           (e.g., "./swish-qr.png" once uploaded alongside index.html).
+       5. Guest-list emails use Web3Forms via `CONFIG.web3formsAccessKey`.
        ===================================================================== -->
 
   <script>
@@ -717,7 +718,7 @@
 
           <div class="flex items-center justify-between gap-2 bg-rose-950 border border-amber-400/35 rounded-xl p-2.5 pl-3.5">
               <span id="swish-message-preview" class="text-xs sm:text-sm font-semibold text-amber-100 truncate">
-                2x Comedy Dec 19 - [Your Name]
+                [Your Name]
               </span>
             <button
                 id="copy-msg-btn"
@@ -772,10 +773,17 @@
       </p>
 
       <form id="rsvp-form" onsubmit="handleSeatConfirmation(event)" class="space-y-3">
+        <!-- Web3Forms: sends guest details to your inbox -->
+        <input type="hidden" name="access_key" id="web3forms-access-key" value="" />
+        <input type="hidden" name="subject" value="New Swish Guest — Comedy Night with Desis" />
+        <input type="hidden" name="from_name" value="Comedy Night Guest List" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div>
           <label for="guest-name" class="block text-xs font-bold text-amber-100 mb-1">Full Name (matching your Swish message)</label>
           <input
               id="guest-name"
+              name="name"
               type="text"
               required
               oninput="syncMessageWithName()"
@@ -786,11 +794,14 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label for="guest-contact" class="block text-xs font-bold text-amber-100 mb-1">Email or Phone Number</label>
+            <label for="guest-contact" class="block text-xs font-bold text-amber-100 mb-1">Email <span class="font-normal text-amber-200/70">(or phone)</span></label>
             <input
                 id="guest-contact"
+                name="email"
                 type="text"
                 required
+                inputmode="email"
+                autocomplete="email"
                 placeholder="rahul@example.com or 07X..."
                 class="w-full px-3.5 py-2.5 rounded-xl bg-black/45 border border-amber-400/30 text-sm text-white placeholder-amber-200/40 focus:outline-none focus:border-amber-400 transition"
             />
@@ -800,6 +811,7 @@
             <label for="guest-tickets" class="block text-xs font-bold text-amber-100 mb-1">Tickets Paid For</label>
             <select
                 id="guest-tickets"
+                name="tickets"
                 class="w-full px-3.5 py-2.5 rounded-xl bg-rose-950 border border-amber-400/30 text-sm text-white focus:outline-none focus:border-amber-400 transition"
             >
               <option value="1">1 Ticket (150 SEK)</option>
@@ -812,11 +824,13 @@
         </div>
 
         <button
+            id="rsvp-submit-btn"
             type="submit"
-            class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 active:scale-[0.99] border border-teal-300/40 text-sm font-extrabold text-white shadow-lg transition cursor-pointer"
+            class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 active:scale-[0.99] border border-teal-300/40 text-sm font-extrabold text-white shadow-lg transition cursor-pointer disabled:opacity-60 disabled:cursor-wait"
         >
           Confirm My Spot
         </button>
+        <p id="rsvp-form-status" class="hidden text-xs text-center font-semibold" role="status" aria-live="polite"></p>
       </form>
 
       <!-- Instant On-Screen Booking Pass Summary -->
@@ -877,7 +891,9 @@
     // Ticket price in Swedish Kronor (SEK)
     ticketPriceSEK: 99,
     // Path or URL to your static Swish QR PNG (leave empty "" to show the built-in placeholder)
-    swishQrImageUrl: "swish-qr.png"
+    swishQrImageUrl: "swish-qr.jpeg",
+    // Web3Forms access key — guest-list confirmations are emailed to your inbox
+    web3formsAccessKey: "2f78ea64-7954-4817-bd2c-037a42fbed28"
   };
 
   let currentTickets = 2;
@@ -892,6 +908,9 @@
       const hiddenInputEl = document.getElementById("hidden-swish-input");
       if (swishDisplayEl) swishDisplayEl.textContent = CONFIG.swishNumberDisplay;
       if (hiddenInputEl) hiddenInputEl.value = CONFIG.swishNumberRaw;
+
+      const accessKeyInput = document.getElementById("web3forms-access-key");
+      if (accessKeyInput) accessKeyInput.value = CONFIG.web3formsAccessKey;
 
       document.querySelectorAll(".js-ticket-price").forEach((el) => {
         el.textContent = CONFIG.ticketPriceSEK;
@@ -1108,28 +1127,87 @@
   }
 
   /**
-   * Handle 'Confirm Your Spot' mini-form submission
+   * Handle 'Confirm Your Spot' — email organizer via Web3Forms, then show VIP pass
    */
-  function handleSeatConfirmation(event) {
+  async function handleSeatConfirmation(event) {
     event.preventDefault();
+
+    const form = document.getElementById("rsvp-form");
+    const submitBtn = document.getElementById("rsvp-submit-btn");
+    const statusEl = document.getElementById("rsvp-form-status");
     const name = document.getElementById("guest-name").value.trim();
     const contact = document.getElementById("guest-contact").value.trim();
     const tickets = parseInt(document.getElementById("guest-tickets").value, 10);
     const total = tickets * CONFIG.ticketPriceSEK;
 
-    const box = document.getElementById("booking-confirmation-box");
-    const details = document.getElementById("confirmation-details");
+    const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
 
-    details.innerHTML = `
+    const payload = {
+      access_key: CONFIG.web3formsAccessKey,
+      subject: `New Swish Guest: ${name} — ${tickets} ticket${tickets === 1 ? "" : "s"} (${total} SEK)`,
+      from_name: "Comedy Night Guest List",
+      name,
+      contact,
+      tickets: `${tickets}`,
+      amount_sek: `${total}`,
+      show: "Comedy Night with Desis — Hindi Stand-Up (Sat 19 Dec 2026, 17:00)",
+      venue: "The South Indian, Rådmansgatan 52, Stockholm",
+      message: `${name} confirmed ${tickets} ticket(s) for ${total} SEK via Swish. Contact: ${contact}`
+    };
+    // Web3Forms uses `email` as reply-to when present
+    if (looksLikeEmail) payload.email = contact;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending confirmation…";
+    statusEl.classList.remove("hidden", "text-emerald-300", "text-rose-300");
+    statusEl.classList.add("text-amber-200");
+    statusEl.textContent = "Saving your spot — please wait…";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Could not send confirmation email.");
+      }
+
+      const box = document.getElementById("booking-confirmation-box");
+      const details = document.getElementById("confirmation-details");
+
+      details.innerHTML = `
         <strong>Show:</strong> Comedy Night with Desis (Hindi Stand-Up)<br/>
         <strong>Guest:</strong> ${escapeHtml(name)}<br/>
         <strong>Admits:</strong> ${tickets} ${tickets === 1 ? "Person" : "People"} (${total} SEK via Swish)<br/>
         <strong>Contact:</strong> ${escapeHtml(contact)}
       `;
 
-    box.classList.remove("hidden");
-    box.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    showToast("Your Bollywood VIP Guest Pass is ready!");
+      box.classList.remove("hidden");
+      box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+      statusEl.classList.remove("text-amber-200", "text-rose-300");
+      statusEl.classList.add("text-emerald-300");
+      statusEl.textContent = "You're on the guest list — check your inbox if you used an email.";
+      showToast("Your Bollywood VIP Guest Pass is ready!");
+      form.reset();
+      document.getElementById("guest-tickets").value = String(Math.min(tickets, 5));
+      renderTicketTotals();
+    } catch (err) {
+      console.error("Web3Forms error:", err);
+      statusEl.classList.remove("text-amber-200", "text-emerald-300");
+      statusEl.classList.add("text-rose-300");
+      statusEl.textContent = "Could not send confirmation. Check your connection and try again.";
+      showToast("Confirmation failed — please try again.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Confirm My Spot";
+    }
   }
 
   /**
